@@ -4,24 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Login</title>
+
+    <!-- Existing stylesheet (UNCHANGED) -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Navbar styles ONLY -->
+    <style>
+        .navbar {
+            background: #1f2933;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .nav-links li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="logo">MyApp</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Login Form (styled by style.css) -->
     <div class="login-container">
         <form class="login-form" id="loginForm">
             <h2>Login</h2>
+
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
             </div>
+
             <div class="input-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
+
             <button type="submit">Login</button>
             <p id="message"></p>
         </form>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
